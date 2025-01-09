@@ -9,11 +9,11 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            height: 100vh; /* Full viewport height */
             background-image: url('background.jpeg'); /* Ensure the image exists */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            color: #fff;
         }
         h1 {
             position: absolute;
@@ -22,22 +22,26 @@
             font-size: 2.5rem;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
             font-weight: bold;
+            color: #fff;
         }
         .container {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            margin-top: 30vh;
+            align-items: flex-start;
+            margin: 20vh auto 0;
+            width: 300px;
+            padding-left: 10px;
         }
         .link-box {
-            margin: 10px;
-            padding: 15px 30px;
+            width: 280px;
+            margin: 10px 0;
+            padding: 15px 20px;
             background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
             border: 2px solid #fff;
             border-radius: 5px;
-            font-size: 1.5rem;
-            text-align: center;
+            font-size: 1.2rem;
             color: #fff;
+            text-align: left;
             cursor: pointer;
             text-decoration: none;
             transition: background-color 0.3s;
@@ -48,19 +52,22 @@
         .group-members {
             position: absolute;
             bottom: 20px;
-            left: 20px;
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black for readability */
+            left: 10px;
+            background-color: rgba(255, 255, 255, 0.2);
             padding: 10px 20px;
             border-radius: 5px;
+            width: 280px;
         }
         .group-members h2 {
             margin: 0;
             font-size: 1.2rem;
             text-decoration: underline;
+            color: #fff;
         }
         .group-members p {
             margin: 5px 0;
             font-size: 1rem;
+            color: #fff;
         }
     </style>
 </head>
