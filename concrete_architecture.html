@@ -10,11 +10,12 @@
             margin: 0;
             padding: 0;
             height: 100vh;
-            background-image: url('background.jpeg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            background-color: #000; /* Set background to solid black */
             color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
         .home-btn {
             position: absolute;
@@ -31,17 +32,71 @@
         .home-btn:hover {
             background-color: rgba(255, 255, 255, 0.4);
         }
-        .content {
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            width: 90%;
+            max-width: 1200px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border: 2px solid #fff;
+            border-radius: 10px;
+        }
+        .document {
+            flex: 1;
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            margin-top: 20vh;
-            padding-left: 10px;
-            width: 300px;
+            align-items: center;
+            text-align: center;
+        }
+        h2 {
+            text-decoration: underline;
+            margin-bottom: 10px;
+        }
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            background-color: #fff;
+        }
+        .download-btn {
+            display: block;
+            width: 200px;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border: 2px solid #fff;
+            border-radius: 5px;
+            font-size: 1rem;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .download-btn:hover {
+            background-color: rgba(255, 255, 255, 0.5);
         }
     </style>
 </head>
 <body>
     <a href="index.html" class="home-btn">Home</a>
+
+    <div class="container">
+        <!-- PDF Section -->
+        <div class="document">
+            <h2>Concrete Architecture PDF</h2>
+            <iframe src="https://docs.google.com/gview?url=https://github.com/Mirwais-Morrady/SoftwareArchitecture/blob/main/CISC322_A2.pdf&embedded=true"></iframe>
+            <a href="https://github.com/Mirwais-Morrady/SoftwareArchitecture/blob/main/CISC322_A2.pdf" class="download-btn" download>📥 Download PDF</a>
+        </div>
+
+        <!-- PPTX Section -->
+        <div class="document">
+            <h2>Concrete Architecture Presentation</h2>
+            <iframe src="https://docs.google.com/gview?url=https://github.com/Mirwais-Morrady/SoftwareArchitecture/blob/main/Concrete%20Architecture%20of%20GNUstep%20Presentation.pptx&embedded=true"></iframe>
+            <a href="https://github.com/Mirwais-Morrady/SoftwareArchitecture/blob/main/Concrete%20Architecture%20of%20GNUstep%20Presentation.pptx" class="download-btn" download>📥 Download PPT</a>
+        </div>
+    </div>
 </body>
 </html>
